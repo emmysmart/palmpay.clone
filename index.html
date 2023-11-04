@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Facebook.com</title>
+</head>
+<body style="font-family:roboto, sans serif; background-color:#28282B;">
+    <style>
+        .navbar {
+            position:fixed;
+            z-index:999;
+            background-color:#28282b;
+            top:0;
+            left:0;
+            height:110px;
+            right:0;
+        }
+        h2 {
+            color:#ffffff;
+            position:fixed;      
+            top:0;
+            margin-top:10px;
+            left:8px;
+            font-family:roboto, sans serif;            
+        }
+        i {
+            color:#ffffff;
+            position:fixed;
+            top:10px;
+            right:8px;
+            font-size:16px;
+            background-color:black;
+            border:solid 1px gray;
+            border-radius:100%;
+            height:18px;
+            width:18px;
+            padding:5px;
+            padding-left:8px;
+            padding-top:8px;
+        }
+        #one {
+            position:fixed;
+            right:120px;
+        }
+        #two {
+            position:fixed;
+            right:65px;
+        }
+        .sub {
+            display:flex;
+            flex-direction:row;
+            position:fixed;
+            top:60px;
+            justify-content:space-around;
+        }
+        #a {
+            position:fixed;
+            left:30px;
+            color:#007bff;
+            position:fixed;
+            font-size:18px;
+            top:70px;
+            right:0;
+            flex-grow:5;
+        }
+        #b {
+            color:#ffffff;
+            position:fixed;
+            font-size:18px;
+            left:100px;
+            top:70px;
+            right:0;
+            flex-grow:5;
+        }
+        #c {
+            color:#ffffff;
+            position:fixed;
+            font-size:18px;
+            top:70px;
+            right:0;
+            flex-grow:5;
+            left:170px
+        }
+        #d {
+            color:#ffffff;
+            position:fixed;
+            font-size:18px;
+            top:70px;
+            right:0;
+            flex-grow:5;
+            left:240px;
+        }
+        #e {
+            color:#ffffff;
+            position:fixed;
+            font-size:18px;
+            top:70px;
+            right:0;
+            left:310px;
+            flex-grow:5;
+        }
+        .sub {
+            display:flex;
+            position:fixed;
+            flex-direction:row;
+            justify-content:space-around;
+        }
+        .jerry {
+            position:fixed;
+            left:35px;
+            padding-right:5px;
+            color:#ffffff;
+            position:fixed;
+            font-size:9px;
+            background-color:red;
+            border:solid 1px red;
+            width:12px;
+            font-family:arial, sans serif;
+            height:12px;
+            top:50px;
+            font-weight:bold;
+            border-radius:8px;
+            right:0;
+            padding-left:5px;
+            padding-top:5px;
+            flex-grow:5;
+        }
+        .larry {
+            left:110px;
+            color:#ffffff;
+            position:fixed;
+            font-size:9px;
+            font-family:arial, sans serif;
+            background-color:red;
+            border:solid 1px red;
+            width:12px;
+            height:12px;
+            top:50px;
+            font-weight:bold;
+            border-radius:8px;
+            right:0;
+            padding-left:5px;
+            padding-top:5px;
+            flex-grow:5;
+        }
+        .berry {
+            left:180px;
+            color:#ffffff;
+            position:fixed;
+            font-size:9px;
+            background-color:red;
+            font-family:arial, sans serif;
+            border:solid 1px red;
+            width:12px;
+            height:12px;
+            top:50px;
+            font-weight:bold;
+            border-radius:8px;
+            right:0;
+            padding-left:5px;
+            padding-top:5px;
+            flex-grow:5;
+        }
+        .hurry {
+            left:250px;
+            padding-right:5px;
+            color:#ffffff;
+            position:fixed;
+            font-size:9px;
+            font-family:arial, sans serif;
+            background-color:red;
+            border:solid 1px red;
+            width:12px;
+            height:12px;
+            top:50px;
+            font-weight:bold;
+            border-radius:8px;
+            right:0;
+            padding-left:5px;
+            padding-top:5px;
+            flex-grow:5;
+        }
+        .burry {
+            left:320px;
+            color:#ffffff;
+            position:fixed;
+            font-size:9px;
+            background-color:red;
+            border:solid 1px red;
+            width:12px;
+            font-family:arial, sans serif;
+            height:12px;
+            top:50px;
+            font-weight:bold;
+            border-radius:8px;
+            right:0;
+            padding-left:5px;
+            padding-top:5px;
+            flex-grow:5;
+        }
+        .down {
+            display:flex;
+        }
+        .pic {
+            width:5%;
+            position:absolute;
+            top:120px;
+            border:solid 1px white;
+            border-radius:100%;
+            height:45px;
+            width:45px;
+            background-color:white;
+            left:20px;
+        }
+        .text {
+            position:absolute;
+            top:120px;
+            left:85px;
+            height:40px;
+            width:200px;
+            border:solid 1px gray;
+            border-radius:30px;
+            background-color:#c0c0c0;
+            color:white;
+            padding-left:10px;
+        }
+        #photo {
+            position:absolute;
+            top:115px;
+            right:20px;
+            background-color:#28282b;
+            border:solid 1px #28282b;
+            font-size:30px;
+            height:30px;
+        }
+        h6 {
+            color:white;
+            position:absolute;
+            right:16px;
+            top:130px;
+            font-size:10px;
+            font-weight:normal;
+        }
+        .line {
+            border:solid 2px black;
+            position:absolute;
+            left:0;
+            right:0;
+            top:170px;
+        }
+        .slider {
+            width:30%;
+            position:absolute;
+            top:200px;
+            border:solid 1px black;
+            border-radius:10px;
+            width:90px;
+            height:150px;
+            background-color:white;
+        }
+        .emmy {
+            width:30%;
+            position:absolute;
+            top:200px;
+            border:solid 1px black;
+            border-radius:10px;
+            width:90px;
+            height:162px;
+            background-color:white;
+            left:106px;
+        }
+        .teacup {
+            width:30%;
+            position:absolute;
+            top:200px;
+            border:solid 1px black;
+            border-radius:10px;
+            width:90px;
+            height:162px;
+            background-color:white;
+            left:205px;
+        }
+        .coin {
+            width:30%;
+            position:absolute;
+            top:200px;
+            border:solid 1px black;
+            border-radius:10px;
+            width:55px;
+            height:162px;
+            background-color:white;
+            left:304px;
+            right:0;
+        }
+        .mask {
+            border:solid #000000;
+            border-radius:0 0 10px 10px;
+            background-color:#28282b;
+            position:absolute;
+            width:90px;
+            height:60px;
+            top:280px;
+            left:8px;
+        }
+        .lake {
+            background-color:#007bff;
+            position:absolute;
+            font-size:9px;
+            border:solid 1px #007bff;
+            width:12px;
+            height:12px;
+            color:white;
+            top:200px;
+            left:115px;
+            font-weight:bold;
+            border-radius:5px;
+            padding-left:5px;
+            padding-top:5px;
+        }
+        .drake {
+            background-color:#007bff;
+            position:absolute;
+            font-size:9px;
+            border:solid 1px #007bff;
+            width:12px;
+            height:12px;
+            color:white;
+            top:200px;
+            left:215px;
+            font-weight:bold;
+            border-radius:5px;
+            padding-left:5px;
+            padding-top:5px;
+        }
+        .cake {
+            background-color:#007bff;
+            position:absolute;
+            font-size:9px;
+            border:solid 1px #007bff;
+            width:12px;
+            height:12px;
+            color:white;
+            top:200px;
+            left:315px;
+            font-weight:bold;
+            border-radius:5px;
+            padding-left:5px;
+            padding-top:5px;
+        }
+        #plus {    
+            color:#ffffff;
+            position:absolute;
+            top:284px;
+            left:37px;
+            font-size:15px;
+            background-color:#007bff;
+            border:solid 2px white;
+            border-radius:100%;
+            height:16px;
+            width:16px;
+        }
+        .below {
+            position:absolute;
+            left:30px;
+            top:310px;
+            text-align:center;
+            font-size:15px;
+            color:white;
+            font-weight:bold;
+        }
+        .names {
+            color:white;
+            font-size:10px;
+            font-weight:bold;
+            position:absolute;
+            top:325px;
+            left:115px;
+        }
+        .lizzy {
+            color:white;
+            font-size:10px;
+            font-weight:bold;
+            position:absolute;
+            top:325px;
+            left:215px;
+        }
+        .Btc {
+            color:white;
+            font-size:10px;
+            font-weight:bold;
+            position:absolute;
+            top:325px;
+            left:315px;
+        }
+        .divide {
+            border:solid 2px black;
+            position:absolute;
+            left:0;
+            right:0;
+            top:350px;
+        }
+        .round {
+            width:5%;
+            position:absolute;
+            top:385px;
+            border:solid 1px white;
+            border-radius:100%;
+            height:45px;
+            width:45px;
+            background-color:white;
+            left:12px;
+        }
+        .script {
+            color:white;
+            font-weight:bold;
+            font-size:14px;
+            position:absolute;
+            top:378px;
+            left:65px;
+        }
+        #crypto {
+            color:white;
+            position:absolute;
+            top:393px;
+            right:20px;
+            font-size:15px;
+        }
+        #xman {
+            margin-left:15px;
+            color:gray;
+        }
+        .time {
+            position:absolute;
+            top:415px;
+            left:65px;
+            color:gray;
+            font-size:10px;
+        }
+        .peace {
+            width:100%;
+            position:absolute;
+            top:450px;
+            left:0;
+            right:0;
+        }
+        #heart {
+            position:absolute;
+            color:white;
+            background-color:red;
+            top:0;
+            left:8px;
+            margin-left:5px;
+            border:solid 1px red;
+            border-radius:100%;
+            height:13px;
+            width:13px;
+            font-size:12px;
+            padding-top:2px;
+            padding-left:2px;
+        }
+        #thumb {
+            color:white;
+            background-color:#007bff;
+            position:absolute;
+            top:1000px;
+            left:15px;
+            border:solid 1px #007bff;
+            border-radius:100%;
+            height:13px;
+            width:13px;
+            font-size:12px;
+            padding-top:2px;
+            padding-left:2px;
+        }
+        .pizzy {
+            display:flex;
+            flex-direction:row;
+        }
+        #bee {
+            color:white;
+            position:absolute;
+            top:990px;
+            left:50px;
+            font-size:13px;
+        }
+        .touch {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+        }
+        .jojo {
+            position:absolute;
+            top:1025px;
+            left:10px;
+            background-color:black;
+            color:white;
+            border:solid 1px gray;
+            border-radius:30px;
+            height:35px;
+            width:100px
+        }
+        #kemi {
+            font-size:13px;
+        }
+        .yoyo {
+            position:absolute;
+            top:1025px;
+            left:130px;
+            background-color:black;
+            color:white;
+            border:solid 1px gray;
+            border-radius:30px;
+            height:35px;
+            width:100px;
+        }
+        .dodo {
+            position:absolute;
+            top:1025px;
+            background-color:black;
+            color:white;
+            border:solid 1px gray;
+            border-radius:30px;
+            height:35px;
+            left:250px;
+            width:100px;
+        } 
+        .bound {
+            width:5%;
+            position:absolute;
+            top:1070px;
+            border:solid 1px white;
+            border-radius:100%;
+            height:35px;
+            width:35px;
+            background-color:white;
+            left:20px;
+        }
+        .best {
+            position:absolute;
+            top:1070px;
+            left:65px;
+            height:35px;
+            width:260px;
+            border:solid 1px black;
+            border-radius:30px;
+            background-color:black;
+            color:white;
+            padding-left:10px;
+        }
+        .meme {
+            padding-top:5px;
+        }
+    </style>
+    <div class="navbar">
+        <h2>Facebook</h2>
+        <i id="one" class="fa-solid fa-plus"></i>
+        <i id="two" class="fa-solid fa-magnifying-glass"></i>
+        <i id="six" class="fa-solid fa-bars"></i>
+        <index id="a" class="fa-solid fa-house"></i>
+        <index id="b" class="fa-solid fa-users"></i>
+        <index id="c" id="c" class="fa-brands fa-facebook-messenger"></i>
+        <index id="d" class="fa-solid fa-bell"></i>
+        <index id="e" class="fa-solid fa-tv"></i>
+        <p class="jerry">15+</p>
+        <p class="larry">7</p>
+        <p class="berry">10</p>
+        <p class="hurry">11+</p>
+        <p class="burry">20</p>
+    </div>
+    <div class="down">
+        <img class="pic" src="fave.jpg">
+        <input class="text" type="text" placeholder="What's on your mind?">
+         <i id="photo" class="fa-regular fa-image"></i>
+         <h6>Photo</h6>
+         <h5 class="line"></h5>
+    </div>
+    <div class="third">
+        <img class="slider" src="fave.jpg">
+        <img class="emmy" src="emmy.jpg">
+        <img class="teacup" src="ass.jpg">
+        <img class="coin" src="coin.jpg">
+        <h4 class="mask"></h4>
+        <h3 class="cake">2</h3>
+        <h3 class="drake">4</h3>
+        <h3 class="lake">3</h3>
+        <i id="plus" class="fa-solid fa-plus"></i>
+        <p class="below">Add to<br> story</p>
+        <p class="names">Emmy <br> Fundz</p>
+        <p class="lizzy">Lizzy <br>Gold</p>
+        <p class="Btc">BTC <br> Coin</p>
+        <h5 class="divide"></h5>
+    </div>
+    <div class="scroll">
+        <img class="round" src="shalom.jpg">
+        <p class="script">Mhiz Shalom<a style="font-weight:normal"> updated <br> her profile picture</a></p>
+        <p class="time">5h</p>
+        <index id="crypto" class="fa-solid fa-ellipsis"></i>
+        <index id="xman" class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="pizzy">
+        <img class="peace" src="shalom.jpg">
+        <index id="thumb" class="fa-solid fa-thumbs-up"></i>
+        <index id="heart" class="fa-solid fa-heart"></i>
+    </div>
+    <div class="near">
+        <p id="bee">Cristiano Ronaldo and 50M others</p>
+    </div>
+    <div class="touch">
+        <button class="jojo"><index id="kemi" class="fa-solid fa-thumbs-up"><p class="meme" style="font-family:arial, sans serif; font-weight:normal; display:inline-block; padding-left:2px;">50M</p></i></button>
+        <button class="yoyo"><index id="bemi" class="fa-solid fa-comment"><p class="momo" style="font-family:arial, sans serif; font-weight:normal; display:inline-block; padding-left:2px;">20M</p></i></button>
+        <button class="dodo"><index id="wemi" class="fa-solid fa-share"><p class="bobo" style="font-family:arial, sans serif; font-weight:normal; display:inline-block; padding-left:2px;">10M</p></i></button>
+        <img class="bound" src="fave.jpg">
+        <input class="best" type="text" placeholder="Write a comment...">
+    </div>
+</body>
+</html>
